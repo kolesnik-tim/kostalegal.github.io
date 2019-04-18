@@ -1,0 +1,53 @@
+html
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+  box-sizing: border-box
+  position: relative
+.container
+  width: 100% !important
+  max-width: 1135px
+  box-sizing: border-box
+  +r(1200)
+    padding: 0 15px
+a
+  text-decoration: none
+  transition: all 0.3s
+input[type="submit"]
+  appearance: none
+  -webkit-appearance: none
+textarea
+  resize: none
+
+
++r(767)
+	.hidden-xs
+		display: none !important
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+	.hidden-sm
+		display: none !important
++rmin(1024)
+	.hidden-md
+		display: none !important
+
+
+.pages
+  +center-column
+  padding: 50px 0
+  h1
+    font-size: 40px
+    font-weight: 600
+    text-align: center
+    color: $gunmetal
+    margin-bottom: 40px
+  ul
+    +center-column
+  li
+    margin-bottom: 15px
+  a
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+    color: $strawberry
+    &:hover
+      text-decoration: underline
