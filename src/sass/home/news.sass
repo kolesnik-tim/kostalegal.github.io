@@ -1,0 +1,36 @@
+.home-news
+  background-color: #f9f9f9
+  padding: 75px 0
+  h2
+    margin-bottom: 55px
+  &__block
+    margin: 0 12px 50px
+    &__img
+      +cover
+      height: 115px
+      position: relative
+      &:before
+        content: ''
+        background: $cherry-red
+        width: 100%
+        height: 5px
+        display: block
+        position: absolute
+        bottom: -5px
+        left: 0
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translate(-50%)
+        border: 70px solid transparent
+        border-top: 8px solid $cherry-red
+        bottom: -82px
+    p
+      margin-top: 35px
+    span
+      font-size: 14px
+      margin-top: 10px
+      display: block
+  .btn
+    padding: 11px 35px

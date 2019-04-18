@@ -9,7 +9,17 @@
   font-style: normal;
 }
 
-$icon-facebook: "\EA01";
+$icon-arrow-down: "\EA01";
+$icon-arrow-left: "\EA02";
+$icon-arrow-right: "\EA03";
+$icon-close: "\EA04";
+$icon-download: "\EA05";
+$icon-email-open: "\EA06";
+$icon-fb-2: "\EA07";
+$icon-in-2: "\EA08";
+$icon-phone: "\EA09";
+$icon-search: "\EA0A";
+$icon-twitter: "\EA0B";
 
 
 %icon {
@@ -28,4 +38,14 @@ $icon-facebook: "\EA01";
   display: inline-block;
 }
 
-.icon-facebook:before { content: $icon-facebook; }
+.icon-arrow-down:before { content: $icon-arrow-down; }
+.icon-arrow-left:before { content: $icon-arrow-left; }
+.icon-arrow-right:before { content: $icon-arrow-right; }
+.icon-close:before { content: $icon-close; }
+.icon-download:before { content: $icon-download; }
+.icon-email-open:before { content: $icon-email-open; }
+.icon-fb-2:before { content: $icon-fb-2; }
+.icon-in-2:before { content: $icon-in-2; }
+.icon-phone:before { content: $icon-phone; }
+.icon-search:before { content: $icon-search; }
+.icon-twitter:before { content: $icon-twitter; }

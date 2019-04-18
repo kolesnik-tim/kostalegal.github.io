@@ -1,0 +1,35 @@
+.home-resources
+  padding: 105px 0
+  border-bottom: 1px solid $very-light-pink
+  &__content
+    padding: 0 50px
+  &__column
+    margin: 0 15px
+    h2
+      margin-bottom: 75px
+    &__img
+      height: 155px
+      +cover
+      background-image: url('../img/')
+    &__text
+      display: flex
+      justify-content: flex-end
+      li
+        font-size: 16px
+        font-weight: normal
+        color: $black
+        text-align: right
+        padding: 15px 0 25px
+        border-bottom: 1px solid $very-light-pink
+        padding-left: 30%
+        &:last-child
+          border-bottom: none
+        span
+          font-size: 14px
+          margin-top: 10px
+          display: block
+    &--alerts
+      li
+        padding-left: 0
+        padding-right: 30%
+        text-align: left
