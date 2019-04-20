@@ -1,3 +1,44 @@
 //BEGIN footer
 footer.footer
+  .container
+    .row
+      .col-xs-4
+        form.footer__column.footer__form
+          h3 send us your enquiry
+          input(type="text" name="name" placeholder="Name")
+          input(type="email" name="email" placeholder="E-mail")
+          input(type="tel" name="phone" placeholder="Phone")
+          textarea(name="message" placeholder="Message")
+          button(type="submit").btn Submit
+      .col-xs-4
+        .footer__column.footer__contacts
+          h3 Our contacts
+          .footer__contacts__row
+            span Phone:
+            a(href="tel:+998712389428") +998 71 238 9428
+          .footer__contacts__row
+            span Fax:
+            a(href="#") +998 71 235 0806
+          .footer__contacts__row
+            span Address:
+            p International Business Center, 8th floor, 107B Amir Temur str. Tashkent, 100084 Republic of Uzbekistan
+          .footer__contacts__row
+            span Email:
+            a(href="mailto:info@kostalegal.com") info@kostalegal.com
+          .footer__contacts__row
+            span 
+            .footer__contacts__social
+              a(href="#")
+                i.icon.icon-fb-2
+              a(href="#")
+                i.icon.icon-in-2
+              a(href="#")
+                i.icon.icon-twitter
+      .col-xs-4
+        form.footer__column.footer__mailing
+          h3 Subscribe our newsletter
+          p Leave your details to subscribe to our monthly legal newsletter and we will keep you upadated on all significant legal changes in Uzbekistan
+          input(type="text" name="name-2" placeholder="Name")
+          input(type="email" name="email-2" placeholder="E-mail")
+          button(type="submit").btn Subscribe
 //END footer
