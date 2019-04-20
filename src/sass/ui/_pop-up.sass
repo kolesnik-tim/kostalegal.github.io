@@ -1,21 +1,91 @@
-.pop-up
-  &-close
-    width: 30px
-    height: 30px
-    position: absolute
-    right: 20px
-    top: 20px
-    span
-      &:before, &:after
-        content: ''
-        width: 30px
-        height: 2px
-        background: $black
-        position: absolute
-        top: 13px
-      &:before
-        left: 0
-        transform: rotate(45deg)
-      &:after
-        right: 0
-        transform: rotate(-45deg)
+.menu-close
+  width: 20px
+  height: 20px
+  position: absolute
+  left: 30px
+  top: 36px
+  span
+    &:before, &:after
+      content: ''
+      width: 20px
+      height: 4px
+      background: #72787d
+      position: absolute
+      top: 13px
+      border-radius: 3px
+    &:before
+      left: 0
+      transform: rotate(45deg)
+    &:after
+      right: 0
+      transform: rotate(-45deg)
+
+
+.header__menu
+  position: fixed
+  left: -320px
+  top: 0
+  width: 305px
+  height: 100%
+  z-index: 99
+  background: $very-light-pink
+  padding: 40px 30px
+  overflow-y: auto
+  overflow-x: hidden
+  \transition: all 0.8s
+  &.is-active
+    left: 0
+  h4
+    font-size: 16px
+    font-weight: normal
+    color: #3c4646
+    margin-left: 45px
+    margin-bottom: 60px
+  li
+    a
+      font-size: 16px
+      font-weight: normal
+      color: #3c4646
+      padding: 25px 0 5px
+      display: inline-flex
+      align-items: center
+      i
+        transform: rotate(-90deg)
+        font-size: 11px
+        margin-left: 5px
+        +tr
+    &.active
+      a
+        border-bottom: 2px solid $cherry-red
+    &.dropdown-open
+      a
+        color: $cherry-red
+        i
+          transform: rotate(0deg)
+      .header__menu__dropdown
+        a
+          color: #3c4646
+  &__dropdown
+    display: none
+    padding-left: 35px
+  &__newsletter
+    position: relative
+    font-size: 16px
+    color: #3c4646
+    padding-top: 30px
+    display: block
+    margin-top: 25px
+    margin-bottom: 35px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: -30px
+      width: calc(100% + 60px)
+      height: 1px
+      background: $light-grey-blue
+  &__social
+    a
+      color: $gunmetal
+      font-size: 22px
+      margin-right: 20px

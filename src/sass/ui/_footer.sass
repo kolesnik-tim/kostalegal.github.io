@@ -1,10 +1,18 @@
 .footer
   border-top: 2px solid $cherry-red
   padding: 55px 0 70px
+  +r(767)
+    padding: 50px 0
   h3
     margin-bottom: 35px
+    +r(767)
+      font-size: 30px
+      font-weight: 600
+      text-align: center
   &__column
     padding: 0 40px
+    +r(767)
+      padding:  0 60px
     input
       margin-bottom: 10px
       width: 100%
@@ -27,9 +35,22 @@
   &__contacts
     border-right: 1px solid $very-light-pink-three
     border-left: 1px solid $very-light-pink-three
+    +r(767)
+      border: none
+    .btn
+      +r(767)
+        position: relative
+        left: 50%
+        transform: translate(-50%)
+        margin-top: 10px
     &__row
       display: flex
       margin-bottom: 20px
+      +r(767)
+        &:last-child
+          justify-content: center
+          span
+            display: none
       span
         display: block
         width: 70px
@@ -49,6 +70,8 @@
     &__social
       display: flex
       margin-top: 20px
+      +r(767)
+        margin-top: 30px
       a
         margin-right: 15px
         color: $gunmetal

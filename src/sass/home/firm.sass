@@ -1,12 +1,30 @@
 .home-firm
   padding: 110px 0
+  +r(767)
+    padding: 60px 0 50px
   &__text
     h2
       margin-bottom: 50px
+      +r(767)
+        margin-bottom: 30px
     p
       text-align: center
       margin-bottom: 65px
+      +r(767)
+        margin-bottom: 35px
   &__list
     +center
+    +r(767)
+      align-items: flex-end
     img
       margin: 0 32px
+      +r(767)
+        margin: 0 18px
+        &:first-child
+          height: 51px
+        &:nth-child(2)
+          height: 57px
+        &:nth-child(3)
+          height: 27px
+        &:last-child
+          height: 55px

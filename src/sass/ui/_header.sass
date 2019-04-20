@@ -3,42 +3,49 @@
   background: $white
   position: relative
   z-index: 10
-  // .menu-open
-  //   position: absolute
-  //   left: 20px
-  //   top: 65px
-  //   width: 30px
-  //   height: 30px
-  //   display: none
-  //   z-index: 99
-  //   +r(1100)
-  //     display: block
-  //   +r(767)
-  //     top: 55%
-  //     transform: translate(0, -50%)
-  //   span
-  //     width: 30px
-  //     height: 2px
-  //     margin-top: 10px
-  //     background: $white
-  //     display: block
-  //     &:before, &:after
-  //       content: ''
-  //       width: 30px
-  //       height: 2px
-  //       background: $white
-  //       position: absolute
-  //       left: 0
-  //     &:before
-  //       top: 0
-  //     &:after
-  //       bottom: 8px
+  +r(1040)
+    padding: 40px 0
+  .menu-open
+    position: absolute
+    left: 20px
+    top: 50%
+    transform: translate(0, -50%)
+    width: 20px
+    height: 19px
+    display: none
+    z-index: 99
+    +r(1040)
+      display: block
+    span
+      width: 20px
+      height: 3px
+      margin-top: 8px
+      background: #72787d
+      display: block
+      border-radius: 2px
+      &:before, &:after
+        content: ''
+        width: 20px
+        height: 3px
+        background: #72787d
+        position: absolute
+        left: 0
+        border-radius: 2px
+      &:before
+        top: 0
+      &:after
+        bottom: 0px
   &__content
     +center-y
     justify-content: space-between
   &__logo
+    +r(1040)
+      padding-left: 40px
+      +center
   &__nav
     margin-right: 200px
+    +r(1040)
+      display: none
     &__list
       display: flex
       align-items: center
@@ -104,8 +111,7 @@
       overflow: hidden
       &.is-active
         a
-          opacity: 1
-          visibility: visible
+          display: block
         button
           left: 0
       div
@@ -118,6 +124,12 @@
         border-bottom: 1px solid $very-light-pink-three
         +center
         +tr
+        &.is-active
+          width: 340px
+          +r(1100)
+            width: 300px
+          +r(767)
+            width: calc(100vw - 70px)
         input
           width: 100%
           font-size: 16px
@@ -131,8 +143,6 @@
           background: none
           display: block
           position: relative
-          left: 5px
-          top: -1px
           +tr
           &:hover
             i
@@ -145,8 +155,7 @@
             +tr
         a
           color: $light-grey-blue
-          opacity: 0
-          visibility: hidden
+          display: none
           margin-right: 0
           i
             font-size: 13px

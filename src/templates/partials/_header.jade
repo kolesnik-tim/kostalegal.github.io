@@ -1,9 +1,13 @@
 //BEGIN header
 header.header
+  .menu-open
+    span
   .container
     .header__content
-      .header__logo
+      .header__logo.hidden-sm.hidden-xs
         img(src="img/logo.png", alt="")
+      .header__logo.hidden-md
+        img(src="img/logo-small.png", alt="")
       nav.header__nav
         ul.header__nav__list
           li.active
@@ -78,3 +82,74 @@ header.header
               i.icon.icon-close
         
 //END header
+//BEGIN header-mobile
+.header__menu
+  .menu-close 
+    span
+  h4 Main menu
+  ul
+    li.active
+      a(href="index.html") Home    
+    li.header__menu__item-dropdown
+      a(href="#") Expertise
+        i.icon.icon-arrow-down
+      ul.header__menu__dropdown
+        li
+          a(href="#") Banking and Finance
+        li 
+          a(href="#") Corporate and M&A
+        li 
+          a(href="#") Energy and Natural Resources 
+        li 
+          a(href="#") Project Finance and  Infrastructure 
+        li 
+          a(href="#") Development
+      ul.header__menu__dropdown
+        li
+          a(href="#") Competition and Antitrust
+        li 
+          a(href="#") Cross-Border Trade and Customs
+        li 
+          a(href="#") Labour and Employment 
+        li 
+          a(href="#") Real Estate and Construction
+      ul.header__menu__dropdown
+        li
+          a(href="#") Compliance & regulatory
+        li 
+          a(href="#") Dispute Resolution
+        li 
+          a(href="#") Pharmaceutics and Healthcare
+        li 
+          a(href="#") Retail and Consumer Goods
+        li
+            a(href="#") Telecommunications, Media and technology 
+    li.header__menu__item-dropdown
+      a(href="#") Resources
+        i.icon.icon-arrow-down
+      ul.header__menu__dropdown
+        li
+          a(href="#") Legal Alerts
+        li 
+          a(href="#") News
+        li 
+          a(href="#") Newsletters
+        li 
+          a(href="#") Publications
+    li 
+      a(href="#") Firm
+    li 
+      a(href="#") Team
+    li 
+      a(href="#") Careers
+    li 
+      a(href="#") Contact us
+  a(href="#").header__menu__newsletter Subscribe to our newsletter
+  .header__menu__social
+    a(href="#")
+      i.icon.icon-fb-2
+    a(href="#")
+      i.icon.icon-in-2
+    a(href="#")
+      i.icon.icon-twitter
+//END header-mobile

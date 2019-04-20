@@ -1,9 +1,16 @@
 .home-download
   padding: 75px 0
+  +r(767)
+    padding: 40px 0
   &__content
     +center
+    +r(767)
+      flex-direction: column
   &__img
     margin-right: 50px
+    +r(767)
+      margin-right: 0
+      margin-bottom: 25px
     img
       max-width: 100%
   &__link

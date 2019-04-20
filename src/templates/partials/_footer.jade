@@ -2,7 +2,7 @@
 footer.footer
   .container
     .row
-      .col-xs-4
+      .col-xs-4.hidden-xs
         form.footer__column.footer__form
           h3 send us your enquiry
           input(type="text" name="name" placeholder="Name")
@@ -10,7 +10,7 @@ footer.footer
           input(type="tel" name="phone" placeholder="Phone")
           textarea(name="message" placeholder="Message")
           button(type="submit").btn Submit
-      .col-xs-4
+      .col-sm-4.col-xs-12
         .footer__column.footer__contacts
           h3 Our contacts
           .footer__contacts__row
@@ -25,6 +25,7 @@ footer.footer
           .footer__contacts__row
             span Email:
             a(href="mailto:info@kostalegal.com") info@kostalegal.com
+          a(href="#").btn.hidden-sm.hidden-md Subscribe to our newsletter
           .footer__contacts__row
             span 
             .footer__contacts__social
@@ -34,7 +35,7 @@ footer.footer
                 i.icon.icon-in-2
               a(href="#")
                 i.icon.icon-twitter
-      .col-xs-4
+      .col-xs-4.hidden-xs
         form.footer__column.footer__mailing
           h3 Subscribe our newsletter
           p Leave your details to subscribe to our monthly legal newsletter and we will keep you upadated on all significant legal changes in Uzbekistan

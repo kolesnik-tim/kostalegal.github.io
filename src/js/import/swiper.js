@@ -20,3 +20,13 @@ var swiper = new Swiper('.swiper-intro', {
   //   }
   // }
 });
+
+//home offer
+var swiper = new Swiper('.swiper-offer', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.swiper-offer-next',
+    prevEl: '.swiper-offer-prev',
+  },
+});

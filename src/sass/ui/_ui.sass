@@ -47,19 +47,20 @@ input, textarea
 
 
 
-
-
-
++r(767)
+  .hidden-xs-1
+    display: none
 +r(767)
 	.hidden-xs
 		display: none !important
-@media only screen and (min-width: 768px) and (max-width: 1024px)
+@media only screen and (min-width: 768px) and (max-width: 1040px)
 	.hidden-sm
 		display: none !important
-+rmin(1024)
++rmin(1041)
 	.hidden-md
 		display: none !important
-
+.hidden
+  display: none
 
 
 // swiper
@@ -69,6 +70,9 @@ input, textarea
   height: 58px
   background-color: $gunmetal
   +center
+  z-index: 70
+  +r(767)
+    display: none
   i
     color: $white
     font-size: 35px
@@ -111,6 +115,7 @@ input, textarea
   line-height: 1
   text-align: center
   color: $strawberry
+  +tr
   &:hover
     background: $cherry-red
     color: $white

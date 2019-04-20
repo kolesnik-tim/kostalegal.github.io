@@ -1,6 +1,10 @@
 .home-offer
+  .swiper-button-prev, .swiper-button-next
+    display: flex
   h2
     padding: 50px 0
+    +r(767)
+      padding: 0 0 35px
   &__content
     display: flex
     flex-wrap: wrap
@@ -11,6 +15,8 @@
     position: relative
     +r(1100)
       width: 50%
+    +r(767)
+      width: 100%
     img
       height: 100%
       width: 100%
@@ -29,11 +35,17 @@
       color: $white
       text-transform: uppercase
       padding: 0 60px
+      z-index: 3
+      box-sizing: border-box
       +tr
+      &:hover
+        background: rgba(180, 100, 120, 0.7) !important
       +r(1600)
         padding: 0 30px
       +r(1300)
         padding: 0 15px
+      +r(767)
+        padding: 0 60px
     &:hover
       span
         background: rgba(0, 0 ,0, 0.5)

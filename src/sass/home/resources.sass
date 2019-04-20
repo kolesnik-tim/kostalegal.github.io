@@ -1,21 +1,34 @@
 .home-resources
   padding: 105px 0
   border-bottom: 1px solid $very-light-pink
+  +r(767)
+    padding: 45px 0
+    border-bottom: none
   &__content
     padding: 0 50px
+    +r(767)
+      padding: 0
   &__column
     margin: 0 15px
+    +r(767)
+      border-bottom: 2px solid $light-grey-blue
     h2
       margin-bottom: 75px
+      +r(767)
+        margin-bottom: 30px
     &__img
       height: 155px
       +cover
       display: flex
       align-items: center
       padding-left: 30px
+      +r(767)
+        display: none
       &-1
         background-image: url('../img/home/resources-1.png')
         margin-bottom: 60px
+        +r(767)
+
       &-2
         background-image: url('../img/home/resources-2.png')
         margin-top: 60px
@@ -28,6 +41,9 @@
     &__text
       display: flex
       justify-content: flex-end
+      +r(767)
+        flex-direction: column
+        align-items: center
       li
         font-size: 16px
         font-weight: normal
@@ -36,13 +52,28 @@
         padding: 15px 0 25px
         border-bottom: 1px solid $very-light-pink
         padding-left: 30%
+        +r(767)
+          text-align: left
+          padding-left: 0
+          padding-right: 0
         &:last-child
           border-bottom: none
         span
           font-size: 14px
           margin-top: 10px
           display: block
+      a
+        font-size: 16px
+        font-weight: 600
+        color: $strawberry
+        display: inline-block
+        line-height: 1
+        border-bottom: 1px solid $strawberry
+        margin-bottom: 45px
+        margin-top: 15px
     &--alerts
+      +r(767)
+        padding-top: 45px
       li
         padding-left: 0
         padding-right: 30%
