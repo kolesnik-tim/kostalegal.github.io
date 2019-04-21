@@ -20,15 +20,17 @@
     &__img
       display: flex
       align-items: flex-end
-    img
-      margin: 0 32px
+      margin: 60px 32px 0
       +r(767)
         margin: 0 18px
-        &:first-child
-          height: 51px
-        &:nth-child(2)
-          height: 57px
-        &:nth-child(3)
-          height: 27px
-        &:last-child
-          height: 55px
+      img
+        +r(767)
+          height: 100%
+      &:first-child
+        height: 51px
+      &:nth-child(2)
+        height: 57px
+      &:nth-child(3)
+        height: 27px
+      &:last-child
+        height: 55px
