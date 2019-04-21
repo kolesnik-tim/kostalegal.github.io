@@ -76,35 +76,57 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 
 
 
-//Ajax отправка формы
-document.querySelectorAll('.footer__form').forEach(function(item) {
-  item.addEventListener('submit', function(event) {
-    sendAjaxForm(this, event);
-  });});
-function sendAjaxForm(form, event) {
-  var fields = form.querySelectorAll('input, textarea');
+// //Ajax отправка формы
+// document.querySelectorAll('.footer__form').forEach(function(item) {
+//   item.addEventListener('submit', function(event) {
+//     sendAjaxForm(this, event);
+//   });});
+// function sendAjaxForm(form, event) {
+//   var fields = form.querySelectorAll('input, textarea');
 
-  var formHasError =  Array.prototype.reduce.call(fields, function(invalidCount, currentItem) {
-    if (currentItem.matches(':invalid')) invalidCount++;
-  }, 0);
+//   var formHasError =  Array.prototype.reduce.call(fields, function(invalidCount, currentItem) {
+//     if (currentItem.matches(':invalid')) invalidCount++;
+//   }, 0);
 
-  if (formHasError) {
-    return true;
-  } else {
-    event.preventDefault();
+//   if (formHasError) {
+//     return true;
+//   } else {
+//     event.preventDefault();
 
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
+//     var formData = new FormData(form);
+//     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'js/send.php');
-    xhr.onreadystatechange = function() {
-      if ((xhr.readyState === 4) && (xhr.status === 200)) {
-        data = xhr.responseText;
-        form.outerHTML = '<h2 style-"color: #fdb827; text-align: center;">Мы перезвоним Вам в ближайшее время для подтверждения заказа</h2><h3 style="color: #fdb827; text-align: center;">Спасибо, Ваш заказ отправлен</h3>';
-      }
-    };
-    xhr.send(formData);
+//     xhr.open('POST', 'js/send.php');
+//     xhr.onreadystatechange = function() {
+//       if ((xhr.readyState === 4) && (xhr.status === 200)) {
+//         data = xhr.responseText;
+//         form.outerHTML = '<h2 style-"color: #fdb827; text-align: center;">Мы перезвоним Вам в ближайшее время для подтверждения заказа</h2><h3 style="color: #fdb827; text-align: center;">Спасибо, Ваш заказ отправлен</h3>';
+//       }
+//     };
+//     xhr.send(formData);
 
-    return false;
+//     return false;
+//   }
+// }
+
+
+$('#submit').click(function() { 
+  var name = $('input[name=fio]').val(); 
+  var tel = $('input[name=tel]').val();
+  var otpravka = true;
+  if(name === '') { 
+    otpravka = false;
   }
-}
+  if(tel === '') { 
+    otpravka = false;
+  }
+  if(otpravka) 
+  {
+ 
+    let dannie = {'polz_name':name, 'polz_tel':tel};
+    $.post('js/senda.php', dannie, function(otvet) { 
+      rezultat = '<div style="color:#D80018;">'+otvet.text+'</div>';
+      $('#form_result').hide().html(rezultat).slideDown();
+    }, 'json'); 
+  }
+});
