@@ -12,7 +12,7 @@
   &__column
     padding: 0 40px
     +r(767)
-      padding:  0 60px
+      padding:  0 30px
     input
       margin-bottom: 10px
       width: 100%
@@ -25,7 +25,6 @@
       width: 150px
       height: 40px
     p
-      font-size: 16px
       font-weight: normal
       line-height: 1.38
       color: $gunmetal
@@ -59,12 +58,17 @@
         color: $cherry-red
         margin-right: 17px
         text-align: right
+        +r(767)
+          font-size: 20px
+          width: 90px
       a, p
         font-size: 16px
         font-weight: normal
         line-height: 1.25
         color: $gunmetal
         flex: 1
+        +r(767)
+          font-size: 20px
       a:hover
         text-decoration: underline
     &__social
@@ -76,6 +80,8 @@
         margin-right: 15px
         color: $gunmetal
         font-size: 23px
+        +r(767)
+          font-size: 30px
         &:hover
           text-decoration: none
           color: $cherry-red

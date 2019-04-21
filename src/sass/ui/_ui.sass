@@ -6,6 +6,8 @@ body
   font-size: 16px
   line-height: 1.38
   color: $charcoal-grey
+  +r(767)
+    font-size: 20px
 .container
   width: 100% !important
   max-width: 1135px
@@ -40,6 +42,8 @@ input, textarea
   font-size: 16px
   color: $charcoal-grey
   +placeholder-color($light-grey-blue)
+  +r(767)
+    font-size: 20px
   &:focus
     border-color: $gunmetal
   &:invalid
@@ -121,6 +125,8 @@ input[type="number"]
   text-align: center
   color: $strawberry
   +tr
+  +r(767)
+    font-size: 20px
   &:hover
     background: $cherry-red
     color: $white
@@ -135,6 +141,8 @@ input[type="number"]
     font-weight: normal
     color: #f43524
     position: relative
+    +r(767)
+      font-size: 18px
     &:hover
       &:before
         opacity: 1

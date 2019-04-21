@@ -57,12 +57,15 @@
           text-align: left
           padding-left: 0
           padding-right: 0
+          font-size: 20px
         &:last-child
           border-bottom: none
         span
           font-size: 14px
           margin-top: 10px
           display: block
+          +r(767)
+            font-size: 18px
       a
         font-size: 16px
         font-weight: 600
@@ -72,6 +75,8 @@
         border-bottom: 1px solid $strawberry
         margin-bottom: 45px
         margin-top: 15px
+        +r(767)
+          font-size: 20px
     &--alerts
       +r(767)
         padding-top: 45px

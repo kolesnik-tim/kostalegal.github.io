@@ -4,9 +4,14 @@
     padding: 50px 0
   .tabs__caption
     margin-bottom: 35px
+    +r(767)
+      display: flex
+      justify-content: space-around
     li
       cursor: pointer
       margin-right: 30px
+      +r(767)
+        margin-right: 0
     .active
       background: $cherry-red
       color: $white
@@ -44,30 +49,43 @@
         font-size: 16px
         color: $gunmetal
         text-transform: uppercase
+        +r(767)
+          font-size: 20px
       b
         font-size: 14px
         line-height: 1.71
         color: $gunmetal
         font-weight: 600
+        +r(767)
+          font-size: 18px
       p
-        font-size: 16px
         line-height: 1.38
         color: $gunmetal
       &__link
         +center
         justify-content: flex-start
         padding-top: 5px
+        +r(767)
+          flex-wrap: wrap
         span
           color: $gunmetal
           font-size: 14px
-          margin-right: 2px
+          margin-right: 3px
           position: relative
+          +r(767)
+            font-size: 18px
           &:before
             content: '|'
             margin: 0 8px
             color: $gunmetal
             font-size: 14px
+            +r(767)
+              display: none
         a
           font-size: 14px
           line-height: 1.71
           color: #ff0c11
+          +r(767)
+            font-size: 18px
+          &:first-child
+            width: 100%
