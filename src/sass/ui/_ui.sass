@@ -18,6 +18,7 @@ a
 input[type="submit"]
   appearance: none
   -webkit-appearance: none
+  background: none
 textarea
   resize: none
 h2
@@ -44,7 +45,11 @@ input, textarea
   &:invalid
     color: $cherry-red
     border-color: $cherry-red
-
+input[type="number"]
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    display: none
+    -webkit-appearance: none
+    margin: 0
 
 
 +r(767)
@@ -119,6 +124,44 @@ input, textarea
   &:hover
     background: $cherry-red
     color: $white
+
+
+.breadcrumbs
+  +center-y
+  position: relative
+  z-index: 2
+  a
+    font-size: 14px
+    font-weight: normal
+    color: #f43524
+    position: relative
+    &:hover
+      &:before
+        opacity: 1
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 1px
+      width: calc(100% - 25px)
+      background: #f43524
+      opacity: 0
+      +tr
+    &:after
+      content: $icon-arrow-right
+      font-family: "iconfont"
+      font-size: 8px
+      margin: 0 9px
+      color: #3c4646
+    &:last-child
+      color: #3c4646
+      cursor: default
+      &:after, &:before
+        display: none
+
+
+
 
 
 

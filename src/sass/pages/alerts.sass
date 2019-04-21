@@ -1,0 +1,64 @@
+.alerts
+  &__content
+    padding: 50px 0
+  &__block
+    margin-bottom: 30px
+    display: block
+    +r(767)
+      margin-bottom: 40px
+    &__img
+      height: 100%
+      width: 100%
+      position: relative
+      img
+        width: 100%
+        height: 100%
+        +object-fit(cover)
+      &:before
+        content: ''
+        background: $cherry-red
+        width: 5px
+        height: 100%
+        display: block
+        position: absolute
+        top: 0px
+        right: 0
+        +r(767)
+          width: 100%
+          height: 5px
+          left: 0
+          bottom: 0
+          right: auto
+          top: auto
+      &:after
+        content: ''
+        position: absolute
+        right: -45px
+        top: 50%
+        transform: translate(0, -50%)
+        border: 40px solid transparent
+        border-left: 6px solid $cherry-red
+        +r(767)
+          left: 50%
+          right: auto
+          top: auto
+          transform: translate(-50%, 0)
+          border: 70px solid transparent
+          border-top: 8px solid $cherry-red
+          bottom: -76px
+    &__text
+      margin-left: 15px
+      +r(767)
+        margin-left: 0
+        margin-top: 30px
+      h4
+        font-weight: 600
+        color: $charcoal-grey
+        margin-bottom: 10px
+      p
+        color: $black
+      span
+        font-size: 14px
+        color: $black
+        margin-top: 8px
+        display: block

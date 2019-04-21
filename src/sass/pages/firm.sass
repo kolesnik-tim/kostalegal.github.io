@@ -1,0 +1,39 @@
+.firm
+  &__advantages
+    border-top: 1px solid $very-light-pink
+    padding-top: 40px
+    h2
+      font-size: 28px
+      font-weight: 600
+      text-align: center
+      color: $gunmetal
+      margin-bottom: 55px
+      +r(767)
+        margin-bottom: 20px
+    &__content
+      +center
+      flex-wrap: wrap
+      align-items: flex-start
+      +r(767)
+        flex-direction: column
+        align-items: center
+    &__block
+      max-width: 338px
+      +center-column
+      margin-bottom: 45px
+      +r(767)
+        border-bottom: 1px solid $very-light-pink
+        padding: 30px 0
+        margin-bottom: 0
+      &:nth-child(2n+1)
+        margin-right: 70px
+        +r(767)
+          margin-right: 0
+      h4
+        font-size: 16px
+        font-weight: 600
+        line-height: 1.25
+        color: $cherry-red
+        margin-bottom: 20px
+      p
+        text-align: center

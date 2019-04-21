@@ -30,3 +30,22 @@ var swiper = new Swiper('.swiper-offer', {
     prevEl: '.swiper-offer-prev',
   },
 });
+
+
+//corporate
+var swiper = new Swiper('.swiper-corporate', {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.swiper-corporate-next',
+    prevEl: '.swiper-corporate-prev',
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+    },
+    767: {
+      slidesPerView: 1,
+    }
+  }
+});

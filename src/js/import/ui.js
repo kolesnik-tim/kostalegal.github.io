@@ -1,4 +1,5 @@
 import object from 'object-fit-images';
+import AOS from 'aos';
 // import '../lib/selectize.min.js';
 // import '../lib/maskedinput.js';
 // import modal from 'jquery-modal';
@@ -13,6 +14,16 @@ import object from 'object-fit-images';
 //   });
 //   return false;
 // });
+
+
+
+//animate
+AOS.init({
+  offset: 150,
+  duration: 600,
+});
+
+
 
 //open search
 $('.header__connection__search button').on('click', function() {
@@ -49,4 +60,13 @@ $('.menu-close').on('click', function() {
 //menu dropdown
 $('.header__menu__item-dropdown a').on('click', function() {
   $(this).closest('.header__menu__item-dropdown').toggleClass('dropdown-open').find('.header__menu__dropdown').slideToggle();
+});
+
+
+//tabs
+$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+  $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+  AOS.refreshHard();
 });

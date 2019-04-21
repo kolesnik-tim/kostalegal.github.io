@@ -1,0 +1,29 @@
+---
+title: Careers
+---
+extends layouts/_layout
+block content
+  .page.careers
+    section.page__intro(style="background-image: url('../img/home/intro-bg-2.png')")
+      .container
+        .page__intro__content
+          .breadcrumbs
+            a(href="#") Home
+            a(href="#") Careers
+          h1 Careers
+    section.page__text
+      .container
+        p Kosta Legal attaches great importance to professional development and the team’s continued legal training. As the legal landscape is ever-changing, we strive to keep abreast of these developments by ensuring that our lawyers and support staff are up-to-date with current practice. In order to achieve this, we have developed and implemented a holistic system of continued learning that allows our professionals to proudly stand at the forefront of legal science.
+        p We are always interested in hearing from anyone wishing to join the Kosta Legal team either speculatively or in response to an advertised vacancy. We treat every CV as confidential, so applying speculatively will not impact on your chances of future employment in any way. Please send all CVs to 
+          a(href="mailto:careers@kostalegal.com") careers@kostalegal.com
+          | , clearly stating the type of role you are looking for, and we will contact you should we think you match any opportunity within the firm.
+    .container
+      form.careers__form
+        h2 interested? contact us now
+        input(type="text" name="name" placeholder="Name" data-aos="fade-up")
+        input(type="email" name="email" placeholder="E-mail" data-aos="fade-up")
+        input(type="text" name="applied-position" placeholder="Applied position" data-aos="fade-up")
+        input(type="number" name="duration-experience" placeholder="Duration of experience" data-aos="fade-up")
+        textarea(placeholder="Your CV" data-aos="fade-up")
+        textarea(placeholder="Your Cover Letter" data-aos="fade-up")
+        input(type="submit" value="Submit").btn

@@ -2,7 +2,7 @@
 footer.footer
   .container
     .row
-      .col-xs-4.hidden-xs
+      .col-xs-4.hidden-xs(data-aos="fade-right")
         form.footer__column.footer__form
           h3 send us your enquiry
           input(type="text" name="name" placeholder="Name")
@@ -10,7 +10,7 @@ footer.footer
           input(type="tel" name="phone" placeholder="Phone")
           textarea(name="message" placeholder="Message")
           button(type="submit").btn Submit
-      .col-sm-4.col-xs-12
+      .col-sm-4.col-xs-12(data-aos="fade-down")
         .footer__column.footer__contacts
           h3 Our contacts
           .footer__contacts__row
@@ -21,7 +21,7 @@ footer.footer
             a(href="#") +998 71 235 0806
           .footer__contacts__row
             span Address:
-            p International Business Center, 8th floor, 107B Amir Temur str. Tashkent, 100084 Republic of Uzbekistan
+            a(href="https://www.google.com.ua/maps/place/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9+%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%80/@41.3365261,69.2802567,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8b5208656fb9:0xc1bdeeec09d6438e!8m2!3d41.3365221!4d69.2824454?hl=en" target="_blank") International Business Center, 8th floor, 107B Amir Temur str. Tashkent, 100084 Republic of Uzbekistan
           .footer__contacts__row
             span Email:
             a(href="mailto:info@kostalegal.com") info@kostalegal.com
@@ -35,7 +35,7 @@ footer.footer
                 i.icon.icon-in-2
               a(href="#")
                 i.icon.icon-twitter
-      .col-xs-4.hidden-xs
+      .col-xs-4.hidden-xs(data-aos="fade-left")
         form.footer__column.footer__mailing
           h3 Subscribe our newsletter
           p Leave your details to subscribe to our monthly legal newsletter and we will keep you upadated on all significant legal changes in Uzbekistan
