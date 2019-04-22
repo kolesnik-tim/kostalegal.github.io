@@ -99,8 +99,8 @@ function sendAjaxForm(form, event) {
     xhr.open('POST', 'js/send.php');
     xhr.onreadystatechange = function() {
       if ((xhr.readyState === 4) && (xhr.status === 200)) {
-        data = xhr.responseText;
-        // form.outerHTML = '<h2 style-"color: #fdb827; text-align: center;">Мы перезвоним Вам в ближайшее время для подтверждения заказа</h2><h3 style="color: #fdb827; text-align: center;">Спасибо, Ваш заказ отправлен</h3>';
+        var data = xhr.responseText;
+        form.outerHTML = '<h2>Спасибо, Ваша заявка отправлена</h2>';
       }
     };
     xhr.send(formData);
