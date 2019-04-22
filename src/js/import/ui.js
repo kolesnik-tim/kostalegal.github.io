@@ -77,7 +77,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 
 
 //Ajax отправка формы
-document.querySelectorAll('.footer__form').forEach(function(item) {
+document.querySelectorAll('.form-send').forEach(function(item) {
   item.addEventListener('submit', function(event) {
     sendAjaxForm(this, event);
   });});

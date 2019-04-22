@@ -18,12 +18,12 @@ block content
           a(href="mailto:careers@kostalegal.com") careers@kostalegal.com
           | , clearly stating the type of role you are looking for, and we will contact you should we think you match any opportunity within the firm.
     .container
-      form.careers__form
+      form.careers__form.form-send
         h2 interested? contact us now
         input(type="text" name="name" placeholder="Name" data-aos="fade-up")
         input(type="email" name="email" placeholder="E-mail" data-aos="fade-up")
         input(type="text" name="applied-position" placeholder="Applied position" data-aos="fade-up")
         input(type="number" name="duration-experience" placeholder="Duration of experience" data-aos="fade-up")
-        textarea(placeholder="Your CV" data-aos="fade-up")
-        textarea(placeholder="Your Cover Letter" data-aos="fade-up")
+        textarea(placeholder="Your CV" name="yourCV" data-aos="fade-up")
+        textarea(placeholder="Your Cover Letter" name="your-cover-letter" data-aos="fade-up")
         input(type="submit" value="Submit").btn
