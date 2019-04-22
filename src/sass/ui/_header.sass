@@ -10,16 +10,16 @@
     left: 20px
     top: 50%
     transform: translate(0, -50%)
-    width: 20px
-    height: 19px
+    width: 30px
+    height: 30px
     display: none
     z-index: 99
     +r(1040)
-      display: block
+      display: flex
     span
       width: 20px
       height: 3px
-      margin-top: 8px
+      margin-top: 15px
       background: #72787d
       display: block
       border-radius: 2px
@@ -32,15 +32,15 @@
         left: 0
         border-radius: 2px
       &:before
-        top: 0
+        top: 8px
       &:after
-        bottom: 0px
+        bottom: 5px
   &__content
     +center-y
     justify-content: space-between
   &__logo
     +r(1040)
-      padding-left: 40px
+      margin-left: 45px
       +center
   &__nav
     margin-right: 200px
