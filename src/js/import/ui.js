@@ -53,9 +53,11 @@ $('.home-news-more').on('click', function(event) {
 //header open
 $('.menu-open').on('click', function() {
   $('.header__menu').addClass('is-active');
+  $('.header__menu__bg').fadeIn();
 });
-$('.menu-close').on('click', function() {
+$('.menu-close, .header__menu__bg').on('click', function() {
   $('.header__menu').removeClass('is-active');
+  $('.header__menu__bg').fadeOut();
 });
 
 //menu dropdown
