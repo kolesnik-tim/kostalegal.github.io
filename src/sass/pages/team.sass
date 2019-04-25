@@ -51,6 +51,7 @@
         text-transform: uppercase
         +r(767)
           font-size: 20px
+          text-align: center
       b
         font-size: 14px
         line-height: 1.71
@@ -58,15 +59,20 @@
         font-weight: 600
         +r(767)
           font-size: 18px
+          text-align: center
+          display: block
       p
         line-height: 1.38
         color: $gunmetal
+        +r(767)
+          text-align: center
       &__link
         +center
         justify-content: flex-start
         padding-top: 5px
         +r(767)
           flex-wrap: wrap
+          justify-content: center
         span
           color: $gunmetal
           font-size: 14px
@@ -87,5 +93,6 @@
           color: #ff0c11
           +r(767)
             font-size: 18px
+            text-align: center
           &:first-child
             width: 100%
