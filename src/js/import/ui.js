@@ -41,15 +41,6 @@ $('.header__connection__search a').on('click', function(event) {
 });
 
 
-
-
-//news
-$('.home-news-more').on('click', function(event) {
-  event.preventDefault();
-  $('.home-news .col-sm-4.col-xs-12:nth-child(n+2)').fadeIn();
-});
-
-
 //header open
 $('.menu-open').on('click', function() {
   $('.header__menu').addClass('is-active');
