@@ -90,7 +90,7 @@ function sendAjaxForm(form, event) {
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'js/send.php');
+    xhr.open('POST', '/templates/kostalegal/send.php');
     xhr.onreadystatechange = function() {
       if ((xhr.readyState === 4) && (xhr.status === 200)) {
         var data = xhr.responseText;
