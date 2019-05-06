@@ -70,38 +70,38 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 
 
 
-//Ajax отправка формы
-document.querySelectorAll('.form-send').forEach(function(item) {
-  item.addEventListener('submit', function(event) {
-    sendAjaxForm(this, event);
-  });});
-function sendAjaxForm(form, event) {
-  var fields = form.querySelectorAll('input, textarea');
+// //Ajax отправка формы
+// document.querySelectorAll('.form-send').forEach(function(item) {
+//   item.addEventListener('submit', function(event) {
+//     sendAjaxForm(this, event);
+//   });});
+// function sendAjaxForm(form, event) {
+//   var fields = form.querySelectorAll('input, textarea');
 
-  var formHasError =  Array.prototype.reduce.call(fields, function(invalidCount, currentItem) {
-    if (currentItem.matches(':invalid')) invalidCount++;
-  }, 0);
+//   var formHasError =  Array.prototype.reduce.call(fields, function(invalidCount, currentItem) {
+//     if (currentItem.matches(':invalid')) invalidCount++;
+//   }, 0);
 
-  if (formHasError) {
-    return true;
-  } else {
-    event.preventDefault();
+//   if (formHasError) {
+//     return true;
+//   } else {
+//     event.preventDefault();
 
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
+//     var formData = new FormData(form);
+//     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', '/templates/kostalegal/send.php');
-    xhr.onreadystatechange = function() {
-      if ((xhr.readyState === 4) && (xhr.status === 200)) {
-        var data = xhr.responseText;
-        form.outerHTML = '<h2>Спасибо, Ваша заявка отправлена</h2>';
-      }
-    };
-    xhr.send(formData);
+//     xhr.open('POST', '/templates/kostalegal/send.php');
+//     xhr.onreadystatechange = function() {
+//       if ((xhr.readyState === 4) && (xhr.status === 200)) {
+//         var data = xhr.responseText;
+//         form.outerHTML = '<h2>Спасибо, Ваша заявка отправлена</h2>';
+//       }
+//     };
+//     xhr.send(formData);
 
-    return false;
-  }
-}
+//     return false;
+//   }
+// }
 
 
 // $('#submit').click(function() { 
