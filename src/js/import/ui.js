@@ -21,7 +21,7 @@ import AOS from 'aos';
 AOS.init({
   offset: 150,
   duration: 600,
-  once: true,
+  // once: true,
 });
 
 
@@ -65,62 +65,3 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   AOS.refreshHard();
 });
 
-
-
-
-
-
-// //Ajax отправка формы
-// document.querySelectorAll('.form-send').forEach(function(item) {
-//   item.addEventListener('submit', function(event) {
-//     sendAjaxForm(this, event);
-//   });});
-// function sendAjaxForm(form, event) {
-//   var fields = form.querySelectorAll('input, textarea');
-
-//   var formHasError =  Array.prototype.reduce.call(fields, function(invalidCount, currentItem) {
-//     if (currentItem.matches(':invalid')) invalidCount++;
-//   }, 0);
-
-//   if (formHasError) {
-//     return true;
-//   } else {
-//     event.preventDefault();
-
-//     var formData = new FormData(form);
-//     var xhr = new XMLHttpRequest();
-
-//     xhr.open('POST', '/templates/kostalegal/send.php');
-//     xhr.onreadystatechange = function() {
-//       if ((xhr.readyState === 4) && (xhr.status === 200)) {
-//         var data = xhr.responseText;
-//         form.outerHTML = '<h2>Спасибо, Ваша заявка отправлена</h2>';
-//       }
-//     };
-//     xhr.send(formData);
-
-//     return false;
-//   }
-// }
-
-
-// $('#submit').click(function() { 
-//   var name = $('input[name=fio]').val(); 
-//   var tel = $('input[name=tel]').val();
-//   var otpravka = true;
-//   if(name === '') { 
-//     otpravka = false;
-//   }
-//   if(tel === '') { 
-//     otpravka = false;
-//   }
-//   if(otpravka) 
-//   {
- 
-//     let dannie = {'polz_name':name, 'polz_tel':tel};
-//     $.post('js/senda.php', dannie, function(otvet) { 
-//       rezultat = '<div style="color:#D80018;">'+otvet.text+'</div>';
-//       $('#form_result').hide().html(rezultat).slideDown();
-//     }, 'json'); 
-//   }
-// });

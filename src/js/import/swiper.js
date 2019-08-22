@@ -13,6 +13,10 @@ var swiper = new Swiper('.swiper-intro', {
     el: '.swiper-pagination-intro',
     clickable: true,
   },
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false
+  }
   // breakpoints: {
   //   1024: {
   //     slidesPerView: 1,
